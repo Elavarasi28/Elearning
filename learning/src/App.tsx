@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./sidebar";
 import Home from "./home";
-
+ssh-keygen -t ed25519 -c 
 
 function App() {
   return (
