@@ -38,7 +38,7 @@ export default function Sidebar() {
                 <Link
                   key={name}
                   to={path}
-                  className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium ${
+                  className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                     location.pathname === path
                       ? "bg-muted text-primary"
                       : "text-muted-foreground hover:bg-muted"
@@ -54,17 +54,17 @@ export default function Sidebar() {
       </div>
 
       {/* Desktop */}
-      <aside className="hidden md:flex md:w-64 h-screen border-r p-4">
+      <aside className="hidden md:flex md:w-64 h-screen border-r p-4 bg-white">
         <nav className="flex flex-col gap-3 w-full">
-          <h2 className="text-lg font-semibold mb-4">E-Learning</h2>
+          <h2 className="text-lg font-semibold mb-4 text-black">E-Learning</h2>
           {navItems.map(({ name, icon: Icon, path }) => (
             <Link
               key={name}
               to={path}
-              className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium ${
+              className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                 location.pathname === path
-                  ? "bg-muted text-primary"
-                  : "text-muted-foreground hover:bg-muted"
+                  ? "bg-blue-100 text-black border-l-4 border-blue-500"
+                  : "text-black hover:bg-gray-100 hover:text-black"
               }`}
             >
               <Icon className="h-4 w-4" />
